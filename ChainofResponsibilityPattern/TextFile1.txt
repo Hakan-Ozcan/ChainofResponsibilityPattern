@@ -1,0 +1,15 @@
+﻿Chain of Responsibility tasarım deseni, bir isteği işleyecek olan birden fazla nesnenin oluşturduğu zincir yapısında çalışır.
+Bu desen, isteği işleyecek nesneyi bulmak ve işlemek için bir zincir kullanarak istemciler ve işleyiciler arasında sıkı bir bağlantı kurmaktan kaçınmayı amaçlar.
+Bir istek, zincir boyunca ilerler ve uygun işleyici nesne tarafından işlenene kadar her bir işleyici tarafından değerlendirilir.
+
+Chain of Responsibility deseni genellikle şu bileşenlerden oluşur:
+
+Talep (Request) nesnesi: İşlemek istediğimiz talepleri temsil eden nesnelerdir.
+
+İşleyici (Handler) arayüzü: Talepleri işlemek için kullanılacak yöntemi içeren arayüzdür.
+
+Somut İşleyici (Concrete Handler) sınıfları: İşleyici arayüzünü uygular ve talepleri işlemek için gerçek iş mantığını sağlar. 
+Bu sınıfların zincirde bir sonraki işleyiciyi tanımlaması da mümkündür.
+
+Zincir (Chain) yapısı: Taleplerin geçtiği işleyici nesnelerinin bağlı olduğu yapıdır.
+İstemci, talebi zincirin başına gönderir ve zincir boyunca ilerlerken uygun işleyici tarafından işlenir.
